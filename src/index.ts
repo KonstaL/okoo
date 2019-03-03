@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+
 /*
+    Copyright (C) 2019 Konsta Lehtinen
+
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -28,7 +32,9 @@ import { exitApp, printAppStart, getConfigPath, getExecutionPath } from './util'
 import { OkooConfig } from "./okooConfig";
 
 
-
+/**
+ * Parses the passed CLI-args to the "commander" library
+ */
 function parseCliArgs() {
     program
         .version('0.1.0')
@@ -37,6 +43,11 @@ function parseCliArgs() {
         .parse(process.argv);
 }
 
+/**
+ * Parses the okoo config JSON file and reports errors if it isn't found
+ * 
+ * @returns Promise of the Okoo config file
+ */
 function parseConfig(): Promise<OkooConfig> {
     const configPath = getConfigPath(program);
 
@@ -60,7 +71,12 @@ function parseConfig(): Promise<OkooConfig> {
         });
     })
 }
-
+/**
+ * Checks whether project files match the gicen okoo config
+ * And reports stats of the project
+ * 
+ * @param  {OkooConfig} config
+ */
 const parseFiles = (config: OkooConfig) => {
     console.log('Parsing project files...');
     if(!program.baseDir) {
@@ -101,7 +117,9 @@ const parseFiles = (config: OkooConfig) => {
     });
     
 }
-
+/**
+ * The "main"-method which starts every other method in the program
+ */
 function main() {
     printAppStart();
     parseCliArgs();
