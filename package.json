@@ -1,0 +1,24 @@
+{
+  "name": "okoo",
+  "version": "1.0.0",
+  "description": "Ensure your that your filenames are consistent with okoo filename checker!",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postintall": "tsc"
+  },
+  "author": "Konsta Lehtinen",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^11.10.4",
+    "colors": "^1.3.3",
+    "gaze": "^1.1.3",
+    "glob-fs": "^0.1.7",
+    "micromatch": "^3.1.10",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.32"
+  }
+}
