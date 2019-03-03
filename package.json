@@ -1,6 +1,6 @@
 {
   "name": "okoo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ensure your that your filenames are consistent with okoo filename checker!",
   "main": "dist/index.js",
   "scripts": {
