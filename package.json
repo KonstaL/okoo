@@ -11,10 +11,11 @@
   "author": "Konsta Lehtinen",
   "license": "GNU3.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/KonstaL/okoo.git"
+    "type": "git",
+    "url": "https://github.com/KonstaL/okoo.git"
   },
   "dependencies": {
+    "@types/colors": "^1.2.1",
     "@types/node": "^11.10.4",
     "colors": "^1.3.3",
     "gaze": "^1.1.3",
